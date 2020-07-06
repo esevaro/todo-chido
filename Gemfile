@@ -5,6 +5,7 @@ ruby '2.7.1'
 
 gem 'react-rails'
 
+gem 'rails-controller-testing'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TodoChido</title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,13 @@
   </head>
 
   <body>
+    <%# <%= render 'layout/header' %1> %>
+    <% flash.each do |message_type, message| %>
+      <%= content_tag(:div, message, class: "alert-#{message_type}") %>
+    <% end %>
     <%= yield %>
+    <%# <%= render 'layout/footer' %1> %>
+    <p><%= context_phrase(yield(:context)) %></p>
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>
