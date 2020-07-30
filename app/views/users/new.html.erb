@@ -1,27 +1,8 @@
 <% provide(:title, 'Signup') %>
 <% provide(:context, 'You are in signup page') %>
+<% provide(:button_text, 'Create my account') %>
 <h1>Sign up</h1>
 
 <div>
-  <%= form_with(model: @user, local: true) do |f| %>
-    <%= render 'shared/error_messages' %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-
-    <%= f.label :password_confirmation, 'Confirmation' %>
-    <%= f.password_field :password_confirmation %>
-
-    <%= f.label :remember_me do %>
-      <%= f.check_box :remember_me %>
-      <span>Remember me on this computer</span>
-    <% end %>
-
-    <%= f.submit 'Create my account', class: '' %>
-  <% end %>
+  <%= render 'form' %>
 </div>
