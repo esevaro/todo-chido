@@ -7,7 +7,7 @@ gem 'react-rails'
 
 gem 'rails-controller-testing'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 gem 'sass-rails', '>= 6'
 gem 'webpacker'
 gem 'turbolinks', '~> 5'
